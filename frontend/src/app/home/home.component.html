@@ -1,0 +1,29 @@
+<div class = "gl">
+    <mat-grid-list cols= 4 #grid rowHeight="480px" gutterSize="20px"  >
+      <mat-grid-tile *ngFor="let product of contracts">
+        
+        <mat-card class="example-card">
+         <mat-card-header>
+           <div ></div>
+           <mat-card-title>{{product.name}}</mat-card-title>
+           <mat-card-subtitle>
+           </mat-card-subtitle>
+         </mat-card-header>
+         <img mat-card-image style ="height: 9cm;"  src ={{product.position}} alt="Photo of ">
+         <mat-card-content>
+             price : &#8377; {{product.price}}
+           </mat-card-content>
+         <mat-card-actions>
+          <div class="example-button-row">
+          <button mat-flat-button color="primary">BUY</button> 
+          <button mat-flat-button color="primary" style = " margin-left: 10px;" (click)="addToCart(product)">ADD TO CART</button>
+          </div>
+         </mat-card-actions>
+       </mat-card>
+       
+   
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+ 
