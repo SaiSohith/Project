@@ -119,6 +119,7 @@
           }
         }
       }
+<<<<<<< HEAD
     }
   },
   "defaultProject": "zine",
@@ -126,3 +127,8 @@
     "analytics": "f9cf9b78-e4f6-4499-973a-1e2892f964c5"
   }
 }
+=======
+    }},
+  "defaultProject": "zine"
+}
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf

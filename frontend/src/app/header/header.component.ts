@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { ProductService } from '.././product.service';
 import { Router } from '@angular/router';
+=======
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
 
 @Component({
   selector: 'app-header',
@@ -9,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+<<<<<<< HEAD
   public abc=false;
   constructor(private product: ProductService, private router: Router) { }
 
@@ -33,4 +37,11 @@ export class HeaderComponent implements OnInit {
   }
 
 
+=======
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
 }

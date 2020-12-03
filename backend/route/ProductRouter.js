@@ -45,6 +45,7 @@ router.route('/getproducts/:name').get((req,res,next) => {
     }, (err) => next(err))
     .catch((err) => next(err));
 });
+<<<<<<< HEAD
 
 router.route('/update/:id').put((req,res,next) => {
     Product.findByIdAndUpdate(req.params.id, {
@@ -55,6 +56,8 @@ router.route('/update/:id').put((req,res,next) => {
     },(err) => next(err))
     .catch((err) => next(err));
 });
+=======
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
 module.exports=router;
 
 

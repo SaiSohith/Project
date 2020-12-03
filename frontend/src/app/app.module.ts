@@ -44,7 +44,11 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+<<<<<<< HEAD
 import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
+=======
+import { HttpClientModule } from '@angular/common/http';
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
 
 import 'hammerjs';
 import { AppRoutingModule,  routingComponents } from './app-routing.module';
@@ -52,9 +56,12 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
+<<<<<<< HEAD
 import { FooterComponent } from './footer/footer.component';
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
+=======
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
 
 
 @NgModule({
@@ -64,7 +71,10 @@ import { TokenInterceptorService } from './token-interceptor.service';
     HomeComponent,
     routingComponents,
     CartComponent,
+<<<<<<< HEAD
     FooterComponent,
+=======
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
   ],
   imports: [
     BrowserModule,
@@ -117,11 +127,15 @@ import { TokenInterceptorService } from './token-interceptor.service';
     FormsModule,
     ReactiveFormsModule
   ],
+<<<<<<< HEAD
   providers: [AuthGuard, {
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptorService,
     multi: true
   }],
+=======
+  providers: [],
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
   bootstrap: [AppComponent]
 })
 export class AppModule { }

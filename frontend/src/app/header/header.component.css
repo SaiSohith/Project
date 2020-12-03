@@ -89,6 +89,7 @@
 .example-button-row {
   display: table-cell;
   width: 490px;
+<<<<<<< HEAD
 }
 
 a
@@ -96,3 +97,6 @@ a
   text-decoration: none;
   color: #fff;
 }
+=======
+}
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf

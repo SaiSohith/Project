@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Product, ProductService } from '../product.service';
 import { Router } from '@angular/router';
+<<<<<<< HEAD
 import { HttpErrorResponse } from '@angular/common/http';
+=======
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
 
 @Component({
   selector: 'app-home',
@@ -9,16 +12,23 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+<<<<<<< HEAD
   public contracts ;
   public store = [];
   public arr: Product;
   public user=this.product.user;
   public data;
   public err;
+=======
+public contracts ;
+public store: Product[] = [];
+public arr: Product;
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
   constructor(private product: ProductService, private router: Router) { }
 
 
   ngOnInit(): void {
+<<<<<<< HEAD
     this.GetAll();
   }
   addToCart(pro) {
@@ -68,6 +78,20 @@ export class HomeComponent implements OnInit {
   Order()
   {
     alert('Order will be Delivered in 4 days!');
+=======
+    this.product.getProduct()
+    .subscribe((details) => { this.contracts=details; console.log("hello",details)});
+    if(this.product.user==null)
+    {
+      this.router.navigate(['/login'])
+    }
+  }
+  addToCart(product: Product) {
+    const ar = {position: product.position, name: product.name,  price: product.price};
+    this.arr = ar;
+  //  alert("added to cart sucessfully");
+    this.product.store.push(this.arr);
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
   }
 
 }

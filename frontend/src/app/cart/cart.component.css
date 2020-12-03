@@ -89,7 +89,10 @@
 .example-button-row {
   display: table-cell;
   width: 490px;
+<<<<<<< HEAD
   margin-bottom: 10px;
+=======
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
 }.div1{
   display: flex;
   flex-wrap: wrap;
@@ -109,6 +112,7 @@
  background-color: aqua;
  
 }
+<<<<<<< HEAD
 
 .movetop
 {
@@ -116,3 +120,5 @@
   top: 15%;
   left: 40%;
 }
+=======
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf

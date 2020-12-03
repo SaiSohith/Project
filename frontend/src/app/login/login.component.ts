@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
     const email=this.Login.get('user').value;
     const password=this.Login.get('password').value;
     this.Product.Login(email,password)
+<<<<<<< HEAD
     .subscribe(
       (details) => {
         this.data=details;this.err=null;
@@ -41,10 +42,14 @@ export class LoginComponent implements OnInit {
       (errMes) => {
         this.err=errMes;this.data=null;this.Move()
       });
+=======
+    .subscribe((details) => {this.data=details;console.log(details);this.err=null,this.Move()}, (errMes) => {this.err=errMes;this.data=null;this.Move()});
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
   }
 
   Move()
   {
+<<<<<<< HEAD
     const email=this.Login.get('user').value;
     const password=this.Login.get('password').value;
     if(email=="test@gmail.com" && password=="kittu2001")
@@ -55,6 +60,11 @@ export class LoginComponent implements OnInit {
     {
       this.Product.user=this.data.resp[0];
       console.log("hello",this.Product.user);
+=======
+    if(this.data!=null&& this.err==null)
+    {
+      this.Product.user=this.data;
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
       this.router.navigate(['']);
     }
     else

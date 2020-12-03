@@ -1,6 +1,7 @@
 .example-spacer {
     flex: 1 1 auto;
   }
+<<<<<<< HEAD
 
 .topsearch
 {
@@ -23,6 +24,8 @@
   margin-left: 10px;
 }
 
+=======
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
   /** No CSS for this example */
 .settings-card {
   height: 270px;
@@ -111,7 +114,10 @@
 .example-button-row {
   display: table-cell;
   width: 490px;
+<<<<<<< HEAD
   margin-bottom: 25px;
+=======
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
 }
 .div1{
   display: none;

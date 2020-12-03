@@ -1,8 +1,14 @@
 import { Injectable } from '@angular/core';
+<<<<<<< HEAD
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
+=======
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
 import { HttpErrorMessageService } from './http-error-message.service';
 export interface Product {
   name: string;
@@ -16,6 +22,7 @@ export interface Product {
 export class ProductService {
   public url: String="http://localhost:9000";
  public store: Product[] =[];
+<<<<<<< HEAD
   constructor(private http: HttpClient, private HttpErrorMsg: HttpErrorMessageService, private router:Router) { }
 
     public user=null;
@@ -30,6 +37,11 @@ export class ProductService {
       return this.http.get(`${this.url}/Users/getUserById/${userid}`)
       .pipe(catchError(this.HttpErrorMsg.handleError));
     }
+=======
+  constructor(private http: HttpClient, private HttpErrorMsg: HttpErrorMessageService) { }
+
+    public user=null;
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
     getProduct()
     {
       return this.http.get(`${this.url}/products/products`)
@@ -44,7 +56,11 @@ export class ProductService {
 
     getOneProduct(name)
     {
+<<<<<<< HEAD
       return this.http.get(`${this.url}/products/getproducts/${name}`)
+=======
+      return this.http.get(`${this.url}/products/products/${name}`)
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
       .pipe(catchError(this.HttpErrorMsg.handleError));
     }
 
@@ -54,18 +70,22 @@ export class ProductService {
       .pipe(catchError(this.HttpErrorMsg.handleError));
     }
 
+<<<<<<< HEAD
     pushToCart(cart)
     {
       return this.http.put(`${this.url}/Users/updatecart/${cart.id}`,cart)
       .pipe(catchError(this.HttpErrorMsg.handleError));
     }
 
+=======
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
     Login(email,password)
     {
       return this.http.get(`${this.url}/Users/getUser/${email}/${password}`)
       .pipe(catchError(this.HttpErrorMsg.handleError));
     }
 
+<<<<<<< HEAD
     loggedin()
     {
       return !!localStorage.getItem('token');
@@ -89,4 +109,6 @@ export class ProductService {
       }
       localStorage.setItem('token',JSON.stringify(object));
     }
+=======
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
   }

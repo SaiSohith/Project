@@ -1,5 +1,6 @@
 const mongoose1=require('mongoose');
 
+<<<<<<< HEAD
 const Cart=new mongoose.Schema({
     position: {
         type: String,
@@ -18,6 +19,8 @@ const Cart=new mongoose.Schema({
     }
 });
 
+=======
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
 const user=new mongoose1.Schema({
     name: {
         type: String,
@@ -34,8 +37,12 @@ const user=new mongoose1.Schema({
     password: {
         type: String,
         required: true
+<<<<<<< HEAD
     },
     cart: [Cart],
+=======
+    }
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
 });
 
 module.exports=mongoose1.model('User',user);

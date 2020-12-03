@@ -32,6 +32,7 @@ export class SigninComponent implements OnInit {
   {
     const form=this.SigninForm.value;
     this.Product.Signin(form)
+<<<<<<< HEAD
     .subscribe(
       (details) => { 
         this.details=details;this.err=null;
@@ -45,13 +46,20 @@ export class SigninComponent implements OnInit {
       (errMess) => { 
         this.err=errMess;this.details=null;this.Move()
       })
+=======
+    .subscribe((details) => { this.details=details;this.err=null;this.Move()}, (errMess) => { this.err=errMess;this.details=null;this.Move()})
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
   }
 
   Move()
   {
     if(this.details!=null&& this.err==null)
     {
+<<<<<<< HEAD
       this.Product.user=this.details.resp[0];
+=======
+      this.Product.user=this.details;
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
       this.router.navigate(['']);
     }
     else

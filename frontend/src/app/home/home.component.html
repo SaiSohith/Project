@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <app-header></app-header>
 <div class="topsearch">
   <input mat-Input class="searchinput" type="text" [(ngModel)]="data">
@@ -7,6 +8,12 @@
 <div *ngIf="!err">
     <mat-grid-list cols= 4 #grid rowHeight="480px" gutterSize="20px">
       <mat-grid-tile *ngFor="let product of contracts">
+=======
+<div class = "gl">
+    <mat-grid-list cols= 4 #grid rowHeight="480px" gutterSize="20px"  >
+      <mat-grid-tile *ngFor="let product of contracts">
+        
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
         <mat-card class="example-card">
          <mat-card-header>
            <div ></div>
@@ -20,6 +27,7 @@
            </mat-card-content>
          <mat-card-actions>
           <div class="example-button-row">
+<<<<<<< HEAD
             <button mat-flat-button color="primary" style = "margin-bottom: 10px;" (click)="Order(product)">BUY</button> 
             <button mat-flat-button color="primary" style = " margin-left: 10px; margin-bottom: 10px;" (click)="addToCart(product)">ADD TO CART</button>
           </div>
@@ -32,4 +40,17 @@
     <h1 style="margin-top: 20px; text-align: center;">List was Empty</h1>
   </div>
 <app-footer></app-footer>
+=======
+          <button mat-flat-button color="primary">BUY</button> 
+          <button mat-flat-button color="primary" style = " margin-left: 10px;" (click)="addToCart(product)">ADD TO CART</button>
+          </div>
+         </mat-card-actions>
+       </mat-card>
+       
+   
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+>>>>>>> ce36a75f80df4f43a695069f4564865536c640cf
  
