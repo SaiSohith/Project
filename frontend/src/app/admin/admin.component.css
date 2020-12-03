@@ -1,0 +1,32 @@
+.viewcontent
+{
+    margin-top: 3%;
+    margin-left: 30%;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.singleview
+{
+    margin-bottom: 20px
+}
+
+.labelview
+{
+    width: 50px;
+    margin-bottom: 5px;
+}
+
+input
+{
+    width: 50%;
+    height: 30px;
+}
+
+button
+{
+    background-color: green;
+    color: #fff;
+    text-align: center;
+    margin-left: 200px;
+}

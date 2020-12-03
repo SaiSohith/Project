@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="topsearch">
+  <input mat-Input class="searchinput" type="text" [(ngModel)]="data">
+  <button mat-button class="searchbutton" (click)="Search()">Search</button>
+  <button mat-button class="searchbutton" (click)="GetAll()">Getall</button>
+</div>
+<div *ngIf="!err">
+    <mat-grid-list cols= 4 #grid rowHeight="480px" gutterSize="20px">
+      <mat-grid-tile *ngFor="let product of contracts">
+        <mat-card class="example-card">
+         <mat-card-header>
+           <div ></div>
+           <mat-card-title>{{product.name}}</mat-card-title>
+           <mat-card-subtitle>
+           </mat-card-subtitle>
+         </mat-card-header>
+         <img mat-card-image style ="height: 9cm;"  src ={{product.position}} alt="Photo of ">
+         <mat-card-content>
+             price : &#8377; {{product.price}}
+           </mat-card-content>
+         <mat-card-actions>
+          <div class="example-button-row">
+            <button mat-flat-button color="primary" style = "margin-bottom: 10px;" (click)="Order(product)">BUY</button> 
+            <button mat-flat-button color="primary" style = " margin-left: 10px; margin-bottom: 10px;" (click)="addToCart(product)">ADD TO CART</button>
+          </div>
+         </mat-card-actions>
+       </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <div *ngIf="err">
+    <h1 style="margin-top: 20px; text-align: center;">List was Empty</h1>
+  </div>
+<app-footer></app-footer>
+ 

@@ -1,0 +1,30 @@
+<div>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <div *ngIf="!abc">
+      <button mat-button><a routerLink="/login">Login</a></button>
+      <button mat-button><a routerLink="/signin">Signup</a></button>
+    </div>
+    <div *ngIf="abc">
+      <a routerLink="">
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+          <mat-icon>home</mat-icon>
+        </button>
+      </a>
+      <a routerLink="/cart">
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+      </a>
+      <button mat-button (click)="logout()">Logout</button>
+    </div>
+  </mat-toolbar>
+</div>
+
+<p>
+
+</p>
